@@ -48,7 +48,7 @@ public class MyCommand : Command
 
 ## Documentation
 
-[Full API Documentation](src/AndcultureCode.CSharp.Core/AndcultureCode.CSharp.Core.md)
+[Full API Documentation](src/AndcultureCode.CSharp.Cli/AndcultureCode.CSharp.Cli.md)
 
 ## Development Setup
 
