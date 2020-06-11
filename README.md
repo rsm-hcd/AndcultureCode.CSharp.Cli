@@ -1,5 +1,5 @@
 # AndcultureCode.CSharp.Cli [![Build Status](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Cli.svg?branch=master)](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Cli) [![codecov](https://codecov.io/gh/AndcultureCode/AndcultureCode.CSharp.Cli/branch/master/graph/badge.svg)](https://codecov.io/gh/AndcultureCode/AndcultureCode.CSharp.Cli)
-Port of Cli for .NET Core C#
+Commonly used utilities when building CSharp CLIs for .NET Core C#
 
 ## Getting Started
 This package is installed via NuGet
@@ -8,20 +8,47 @@ dotnet add [<PROJECT>] package AndcultureCode.CSharp.Cli
 ```
 
 After installation, simply import the extensions namespace to gain access
-to all of the available extension methods
+to all of the available utilities.
 ```csharp
 using System;
 using System.Collection.Generic;
 using AndcultureCode.CSharp.Cli;
 
-public class Program
+public class MyCommand : Command
 {
-    public static int Main(string[] args)
+    #region Protected Properties
+
+    protected override string _commandDescription => "Top level command for that does something helpful";
+
+    #endregion Protected Properties
+
+
+    #region Constructor
+
+    public MyCommand(
+        CommandLineApplication command,
+        IConfigurationRoot configurationRoot,
+        IServiceCollection serviceCollection
+    ) : base(command, configurationRoot, serviceCollection)
     {
-        new List<string>().IsEmpty(); // returns true
     }
+
+    #endregion Constructor
+
+    #region Protected Methods
+
+    protected override void RegisterSubCommands()
+    {
+        _command.Command("mySubCommand", cmd => new MySubCommand(cmd, _configurationRoot, _serviceCollection));
+    }
+
+    #endregion Protected Methods
 }
 ```
+
+## Documentation
+
+[Full API Documentation](src/AndcultureCode.CSharp.Core/AndcultureCode.CSharp.Core.md)
 
 ## Development Setup
 

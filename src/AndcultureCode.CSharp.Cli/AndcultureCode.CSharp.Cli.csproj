@@ -3,13 +3,26 @@
   <PropertyGroup>
     <Authors>andculture</Authors>
     <Company>andculture</Company>
-    <Description>Common utiltiies when build CSharp CLIs at andculture</Description>
+    <Description>Commonly used utilities when building CSharp CLIs for .NET Core C# at andculture</Description>
+    <DocumentationFile>$(MSBuildProjectDirectory)/AndcultureCode.CSharp.Cli.xml</DocumentationFile>
+    <DocumentationMarkdown>$(MSBuildProjectDirectory)/AndcultureCode.CSharp.Cli.md</DocumentationMarkdown>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/32297579?s=460&amp;v=4</PackageIconUrl>
     <PackageId>AndcultureCode.CSharp.Cli</PackageId>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/AndcultureCode/AndcultureCode.CSharp.Cli</PackageProjectUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Version>0.0.1</Version>
+    <VsxmdAutoDeleteXml>true</VsxmdAutoDeleteXml>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AndcultureCode.CSharp.Core" Version="0.4.6" />
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.3.4" />
+    <PackageReference Include="Vsxmd" Version="1.4.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>
