@@ -1,5 +1,5 @@
-# AndcultureCode.CSharp.Cli [![Build Status](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Cli.svg?branch=master)](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Cli) [![codecov](https://codecov.io/gh/AndcultureCode/AndcultureCode.CSharp.Cli/branch/master/graph/badge.svg)](https://codecov.io/gh/AndcultureCode/AndcultureCode.CSharp.Cli)
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+# AndcultureCode.CSharp.Cli
+[![Build Status](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Cli.svg?branch=master)](https://travis-ci.org/AndcultureCode/AndcultureCode.CSharp.Cli) [![codecov](https://codecov.io/gh/AndcultureCode/AndcultureCode.CSharp.Cli/branch/master/graph/badge.svg)](https://codecov.io/gh/AndcultureCode/AndcultureCode.CSharp.Cli)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 Commonly used utilities when building CSharp CLIs for .NET Core C#
